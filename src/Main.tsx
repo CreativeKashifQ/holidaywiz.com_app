@@ -1,16 +1,16 @@
-
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
-import { Button, Icon, View } from "native-base";
+import { Button, Icon, Text, View } from "native-base";
 import HomeScreen from "./screens/Guest/HomeScreen";
+import { SafeAreaView } from "react-native";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
 const user = {
-    token : null
-}
+  token: null,
+};
 
 // const DrawerNavigation = () => {
 //   const navigation = useNavigation();
@@ -35,53 +35,19 @@ const user = {
 //         name="Map"
 //         component={MapScreen}
 //       />
-     
+
 //       {/* <Drawer.Screen name="My Profile" component={ProfileScreen} /> */}
-     
+
 //     </Drawer.Navigator>
 //   );
 // };
 
-
-
 export default function Main() {
- 
-  if (!user.token) {
-    return (
-      <View >
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen
-            options={{ title: "", headerShown: false }}
-            name="Home"
-            component={HomeScreen}
-          />
-        </Stack.Navigator>
-      </View>
-    );
-  }
-
   return (
-    <View >
-      <Stack.Navigator>
-        {/* <Stack.Screen
-          options={{ headerShown: false, title: "Home" }}
-          name="Home"
-          component={DrawerNavigation}
-        /> */}
-
-        {/* <Stack.Screen name="Event Details" component={EventDetailsScreen} /> */}
-        
-        {/* <Stack.Screen
-          options={{
-            headerBackTitle: "Back",
-          }}
-          name="Events"
-          component={EventsScreen}
-        /> */}
-      
-
-      </Stack.Navigator>
+    <View
+      style={{ alignItems: "center", justifyContent: "center", marginTop: 20 }}
+    >
+      <HomeScreen />
     </View>
   );
 }
-

@@ -1,9 +1,11 @@
-import { View } from "native-base";
+import { Text, View } from "native-base";
 
 const HomeScreen = () => {
-        return (
-            <View>Home Screen</View>
-        );
-}
+  return (
+    <View>
+      <Text>Home Screen</Text>
+    </View>
+  );
+};
 
 export default HomeScreen;

@@ -1,13 +1,17 @@
-import { View } from "native-base";
+import { NavigationContainer } from "@react-navigation/native";
+import { NativeBaseProvider, View } from "native-base";
 import Main from "./src/Main";
 
-
 const App = () => {
-    return (
-      <View>
-        <Main/>
-      </View>
-    );
-}
+  return (
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <View>
+          <Main />
+        </View>
+      </NavigationContainer>
+    </NativeBaseProvider>
+  );
+};
 
 export default App;
