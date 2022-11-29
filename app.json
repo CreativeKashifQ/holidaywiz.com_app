@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "holidaywiz.com",
-    "slug": "holidaywiz.com",
+    "name": "holidaywiz",
+    "slug": "holidaywiz",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,10 +23,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.kashif978.holidaywiz"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "efff263a-25b2-4ce6-8ef1-9e316301655f"
+      }
     }
   }
 }

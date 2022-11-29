@@ -6,9 +6,7 @@ const App = () => {
   return (
     <NativeBaseProvider>
       <NavigationContainer>
-        <View>
-          <Main />
-        </View>
+        <Main />
       </NavigationContainer>
     </NativeBaseProvider>
   );
